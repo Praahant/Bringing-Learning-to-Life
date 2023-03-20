@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #CCCCCC; /* change to grey color */
+    color: #000000;
+    height: 64px;
+    padding: 0 24px;
+  }
+  
+  
+  .logo {
+    height: 40px;
+    margin-right: 16px;
+  }
+  
+  .company-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
