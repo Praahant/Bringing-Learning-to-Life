@@ -1,21 +1,29 @@
 .header {
     display: flex;
-    align-items: center;
-    background-color: #CCCCCC; /* change to grey color */
-    color: #000000;
-    height: 64px;
-    padding: 0 24px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #454545; /* change to grey color */
+    color: #FFE6C7;
+
+  }
+  .headeContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .hIn{
+    margin-left: 20px;
   }
   
   
-  .logo {
-    height: 40px;
+  .user {
+    /* height: 40px; */
     margin-right: 16px;
   }
   
   .company-name {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
+    /* font-size: 24px; */
+    /* font-weight: bold; */
+    margin-left: 16px;
   }
   
