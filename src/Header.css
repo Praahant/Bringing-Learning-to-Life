@@ -9,21 +9,27 @@
   .headeContent{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: center; */
+    margin: 16px;
   }
   .hIn{
+    border-radius: 20px;
+    width: 160px;
+    /* font-size:large ; */
     margin-left: 20px;
   }
   
   
   .user {
-    /* height: 40px; */
-    margin-right: 16px;
+    font-size: x-large;
+    margin: 16px;
   }
   
   .company-name {
-    /* font-size: 24px; */
-    /* font-weight: bold; */
-    margin-left: 16px;
+    margin: 16px;
+    font-size: x-large;
   }
-  
+  .active{
+    color:#dadfea;
+  }
+/* focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 */
