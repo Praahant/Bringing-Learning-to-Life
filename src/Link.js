@@ -1,29 +1,52 @@
 import React from 'react';
-// import leetcodeLinks from './leetcodeLinks';
-import leetcodeLinks from './Array'; // Import the file we created earlier
-import { List, ListItem, ListItemButton, ListItemText } from '@mui/material';
-
-const LeetCodeLinks = () => {
-  // Extract the keys and values from the leetcodeLinks object
-  const linkKeys = Object.keys(leetcodeLinks);
-  const linkValues = Object.values(leetcodeLinks);
+import links from './Array';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Checkbox, Button } from '@mui/material';
+import Radio from '@mui/material/Radio';
+const DynamicTable = () => {
+  const handleProblemClick = (link) => {
+    if (link) {
+      window.open(link, '_blank');
+    }
+  };
 
   return (
-    <div className="bg-white rounded-lg m-5">
-      <h2 className='ml-5 mt-5'>LeetCode Questions</h2>
-     
-      <List>
-        {linkKeys.map((key, index) => (
-          <ListItem key={index} disablePadding>
-             <div className='bg-lime-500 border-2 rounded-lg ml-5'><ListItemButton component="a" href={linkValues[index]} target="_blank" rel="noopener noreferrer">
-              <ListItemText primary={key} />
-            </ListItemButton> </div>
-          </ListItem>
-        ))}
-      </List>
-     
-    </div>
+    <TableContainer component={Paper}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>Checkbox</TableCell>
+            <TableCell>Name of Problem</TableCell>
+            <TableCell>Level of Problem</TableCell>
+            <TableCell>Button</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {links.map((row) => (
+            <TableRow key={row.id}>
+              <TableCell>
+              <Radio
+        value="a"
+        name="radio-buttons"
+        inputProps={{ 'aria-label': 'A' }}
+      />
+              </TableCell>
+              <TableCell>
+                <a href={row.link} target="_blank" rel="noopener noreferrer">
+                  {row.name}
+                </a>
+              </TableCell>
+              <TableCell>{row.level}</TableCell>
+              <TableCell>
+                <Button variant="contained" color="primary" onClick={() => handleProblemClick(row.link)}>
+                  Solve
+                </Button>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 };
 
-export default LeetCodeLinks;
+export default DynamicTable;

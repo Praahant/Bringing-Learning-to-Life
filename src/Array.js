@@ -1,54 +1,202 @@
-const leetcodeLinks = {
+const links = [
+    {
+      id: 1,
+      name: "Bus Routes",
+      link: "https://leetcode.com/problems/bus-routes/",
+      level: "Medium",
+    },
+    {
+      id: 2,
+      name: "Contains Duplicate",
+      link: "https://leetcode.com/problems/contains-duplicate/",
+      level: "Easy",
+    },
+    {
+      id: 3,
+      name: "Decode String",
+      link: "https://leetcode.com/problems/decode-string/",
+      level: "Hard",
+    },
+    {
+      id: 4,
+      name: "Design Twitter",
+      link: "https://leetcode.com/problems/design-twitter/",
+      level: "Medium",
+    },
+    {
+      id: 5,
+      name: "Design Hit Counter",
+      link: "https://leetcode.com/problems/design-hit-counter/",
+      level: "Medium",
+    },
+    {
+      id: 6,
+      name: "Evaluate Division",
+      link: "https://leetcode.com/problems/evaluate-division/",
+      level: "Medium",
+    },
+    {
+      id: 7,
+      name: "Find Median from Data Stream",
+      link: "https://leetcode.com/problems/find-median-from-data-stream/",
+      level: "Hard",
+    },
+    {
+      id: 8,
+      name: "Find the Closest Palindrome",
+      link: "https://leetcode.com/problems/find-the-closest-palindrome/",
+      level: "Hard",
+    },
+    {
+      id: 9,
+      name: "Insert Delete GetRandom O(1)",
+      link: "https://leetcode.com/problems/insert-delete-getrandom-o1/",
+      level: "Medium",
+    },
+    // {
+    //   id: 10,
+    //   name: "Longest Continuous Subarray with Absolute Diff Less Than or Equal to Limit",
+    //   link: "https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/",
+    //   level: "Hard",
+    // },
+    {
+      id: 11,
+      name: "Last Stone Weight",
+      link: "https://leetcode.com/problems/last-stone-weight/",
+      level: "Easy",
+    },
+    {
+      id: 12,
+      name: "Maximum Product Subarray",
+      link: "https://leetcode.com/problems/maximum-product-subarray/",
+      level: "Medium",
+    },
+    {
+      id: 13,
+      name: "Merge Intervals",
+      link: "https://leetcode.com/problems/merge-intervals/",
+      level: "Medium",
+    },
+    {
+      id: 14,
+      name: "Matchsticks to Square",
+      link: "https://leetcode.com/problems/matchsticks-to-square/",
+      level: "Medium",
+    },
+    {
+      id: 15,
+      name: "Merge Two Sorted Lists",
+      link: "https://leetcode.com/problems/merge-two-sorted-lists/",
+      level: "Easy",
+    },
+    {
+      id: 16,
+      name: "Number of Islands II",
+      link: "https://leetcode.com/problems/number-of-islands-ii/",
+      level: "Hard",
+    },
+    {
+      id: 17,
+      name: "Ones and Zeroes",
+      link: "https://leetcode.com/problems/ones-and-zeroes/",
+      level: "Medium",
+    },
+    {
+      id: 18,
+      name: "Palindrome Linked List",
+      link: "https://leetcode.com/problems/palindrome-linked-list/",
+      level: "Easy",
+    },
+    {
+      id: 19,
+      name: "Roman to Integer",
+      link: "https://leetcode.com/problems/roman-to-integer/",
+      level: "Easy",
+    },
+    {
+      id: 20,
+      name: "Reverse Integer",
+      link: "https://leetcode.com/problems/reverse-integer/",
+      level: "Easy",
+    },
+    {
+      id: 21,
+      name: "Reverse Nodes in k-Group",
+      link: "https://leetcode.com/problems/reverse-nodes-in-k-group/",
+      level: "Hard",
+    },
+    {
+      id: 22,
+      name: "Rotting Oranges",
+      link: "https://leetcode.com/problems/rotting-oranges/",
+      level: "Medium",
+    },
+    {
+      id: 23,
+      name: "Set Matrix Zeroes",
+      link: "https://leetcode.com/problems/set-matrix-zeroes/",
+      level: "Medium",
+    },
+    {
+      id: 24,
+      name: "Stone Game II",
+      link: "https://leetcode.com/problems/stone-game-ii/",
+      level: "Medium",
+    },
+    {
+      id: 25,
+      name: "Sliding Window Maximum",
+      link: "https://leetcode.com/problems/sliding-window-maximum/",
+      level: "Hard",
+    },
+    {
+      id: 26,
+      name: "Search in Rotated Sorted Array",
+      link: "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+      level: "medium",}
+      , {
+        id: 27,
+        name: "The Skyline Problem",
+        link: "https://leetcode.com/problems/the-skyline-problem/",
+        level: "Hard",
+      },
+      {
+        id: 28,
+        name: "Top K Frequent Words",
+        link: "https://leetcode.com/problems/top-k-frequent-words/",
+        level: "Medium",
+      },
+      {
+        id: 29,
+        name: "Text Justification",
+        link: "https://leetcode.com/problems/text-justification/",
+        level: "Hard",
+      },
+      {
+        id: 30,
+        name: "Top K Frequent Elements",
+        link: "https://leetcode.com/problems/top-k-frequent-elements/",
+        level: "Medium",
+      },
+      {
+        id: 31,
+        name: "Word Search II",
+        link: "https://leetcode.com/problems/word-search-ii/",
+        level: "Hard",
+      },
+      {
+        id: 32,
+        name: "Word Search",
+        link: "https://leetcode.com/problems/word-search/",
+        level: "Medium",
+      },
+      {
+        id: 33,
+        name: "Word Ladder",
+        link: "https://leetcode.com/problems/word-ladder/",
+        level: "Medium",
+      },
+    ];
     
-    bus: "https://leetcode.com/problems/bus-routes/",
-    contain_duplicates: "https://leetcode.com/problems/contains-duplicate/",
-    Decode_string: "https://leetcode.com/problems/decode-string/",
-    Design_twitter:"https://leetcode.com/problems/design-twitter/",
-
-Design_Hit_Counter: "https://leetcode.com/problems/design-hit-counter/",
-    
-Evaluate_Division: "https://leetcode.com/problems/evaluate-division/",
-    
-Find_Median_from_Data_Stream: "https://leetcode.com/problems/find-median-from-data-stream/",
-   
-Find_the_Closest_Palindrome:"https://leetcode.com/problems/find-the-closest-palindrome/",
-nsert_Delete_GetRandom: "https://leetcode.com/problems/insert-delete-getrandom-o1/",
-    
-Longest_Continuous_SubarrayWithAbsoluteDiffLessThan_or_Equal_to_Limit: "https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/",
-Last_Stone_Weight: "https://leetcode.com/problems/last-stone-weight/",
-Maximum_product_Subarray:"https://leetcode.com/problems/maximum-product-subarray/",
-Merge_Intervals: "https://leetcode.com/problems/merge-intervals/",
-    
-Matchsticks_to_Square: "https://leetcode.com/problems/matchsticks-to-square/",
-Merge_Two_sorted_Lists: "https://leetcode.com/problems/merge-two-sorted-lists/",
-Number_of_Islands_II:"https://leetcode.com/problems/number-of-islands-ii/",
-Ones_and_Zeroes: "https://leetcode.com/problems/ones-and-zeroes/",
-    
-Palindrome_Linked_List: "https://leetcode.com/problems/palindrome-linked-list/",
-Roman_to_Integer: "https://leetcode.com/problems/roman-to-integer/",
-    
-Reverse_Integer:"https://leetcode.com/problems/reverse-integer/",
-Reverse_Nodes_in_kGroup: "https://leetcode.com/problems/reverse-nodes-in-k-group/",
-Rotting_Oranges: "https://leetcode.com/problems/rotting-oranges/",
-Set_Matrix_Zeroes: "https://leetcode.com/problems/set-matrix-zeroes/",
-Stone_Game_II:"https://leetcode.com/problems/stone-game-ii/",
-    
-Sliding_window_Maximum: "https://leetcode.com/problems/sliding-window-maximum/",
-Search_in_Rotated_Sorted_Array: "https://leetcode.com/problems/search-in-rotated-sorted-array/",
-    
-The_Skyline_Problem: "https://leetcode.com/problems/the-skyline-problem/",
-    
-Top_K_Frequent_Words:"https://leetcode.com/problems/top-k-frequent-words/",
-    text_Justification: "https://leetcode.com/problems/text-justification/",
-    Top_K_Frequent_Elements: "https://leetcode.com/problems/top-k-frequent-elements/",
-    
-Word_Search_II:"https://leetcode.com/problems/word-search-ii/",
-    
-Word_Search: "https://leetcode.com/problems/word-search/",
-    
-Word_Ladder: "https://leetcode.com/problems/word-ladder/",
-    
-  };
-  
-  export default leetcodeLinks;
+    export default links;
   
