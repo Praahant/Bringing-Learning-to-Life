@@ -3,6 +3,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import './Header.css';
 import { Avatar } from '@mui/material';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import top100Films from './ProblemList';
+import FullScreenDialog from './Dialogbox';
+
 function Header() {
   return (
     <div className="header">
@@ -15,7 +20,14 @@ function Header() {
         <NavLink className='' to="/content"> <button className='px-4 py-1 text-sm ml-5 font-semibold rounded-full border hover:text-white hover:border-transparent  shadow-md'>
           content</button> </NavLink>
         </div>
-        
+        {/* <Autocomplete
+        className='mt-2'
+      color="primary"
+      id="combo-box-demo"
+      options={top100Films}
+      sx={{ width: 200 }}
+      renderInput={(params) => <TextField {...params} label="Questions" />}
+    /> */}
         <Avatar className='m-5'>A</Avatar>
     </div>
   );
