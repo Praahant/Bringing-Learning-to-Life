@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import links from './Array';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Checkbox, Button } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button } from '@mui/material';
 import Radio from '@mui/material/Radio';
+import Checkbox from '@mui/material/Checkbox';
+
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
 const DynamicTable = () => {
+  // Create a state to track the checked status for each row
+  const [checkedRows, setCheckedRows] = useState({});
+
   const handleProblemClick = (link) => {
     if (link) {
       window.open(link, '_blank');
     }
+  };
+
+  // Function to handle checkbox state changes
+  const handleCheckboxChange = (rowId, isChecked) => {
+    setCheckedRows((prevCheckedRows) => ({
+      ...prevCheckedRows,
+      [rowId]: isChecked,
+    }));
   };
 
   return (
@@ -22,13 +37,15 @@ const DynamicTable = () => {
         </TableHead>
         <TableBody>
           {links.map((row) => (
-            <TableRow key={row.id}>
+            <TableRow className={checkedRows[row.id] ? 'bg-lime-100' : ''} key={row.id}>
               <TableCell>
-              <Radio
-        value="a"
-        name="radio-buttons"
-        inputProps={{ 'aria-label': 'A' }}
-      />
+                <Checkbox
+                  {...label}
+                  // Set the checked state based on the checkedRows state
+                  checked={checkedRows[row.id] || false}
+                  // Handle the checkbox state changes
+                  onChange={(e) => handleCheckboxChange(row.id, e.target.checked)}
+                />
               </TableCell>
               <TableCell>
                 <a href={row.link} target="_blank" rel="noopener noreferrer">
