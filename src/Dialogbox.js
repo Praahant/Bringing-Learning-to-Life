@@ -30,56 +30,22 @@ const bull = (
   );
 
   
-const Transition = React.forwardRef(function Transition(
-  props: TransitionProps & {
-    children: React.ReactElement;
-  },
-  ref: React.Ref<unknown>,
-) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
+
 
 export default function FullScreenDialog() {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   return (
     <div maxWidth='xs' className='m-5 rounded-tl-xl rounded-br-xl border'> 
       
-      <div className=" rounded-lg">
-      <CardContent className='bg-slate-300 rounded-tl-xl'>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-        Efficient random access (O(1)).
-        </Typography>
-        <Typography variant="h5" component="div">
-         Array And Hashing
-        </Typography>
-      </CardContent>
-      <CardActions  className="rounded-br-xl bg-slate-200">
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Array
-      </Button>
-      </CardActions>
-    </div>
       <Dialog
         fullScreen
-        open={open}
-        onClose={handleClose}
-        TransitionComponent={Transition}
       >
-        <AppBar sx={{ position: 'relative' }}>
+        {/* <AppBar sx={{ position: 'relative' }}>
           <Toolbar>
             <IconButton
               edge="start"
               color="inherit"
-              onClick={handleClose}
+              // onClick={}
               aria-label="close"
             >
               <CloseIcon />
@@ -87,11 +53,11 @@ export default function FullScreenDialog() {
             <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
               Array
             </Typography>
-            <Button autoFocus color="inherit" onClick={handleClose}>
+            <Button autoFocus color="inherit" >
               ESC
             </Button>
           </Toolbar>
-        </AppBar> 
+        </AppBar>  */}
         <LeetCodeLinks/>
       </Dialog>
     </div>

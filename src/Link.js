@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import links from './Array';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button } from '@mui/material';
 import Radio from '@mui/material/Radio';
+import './dark.css'
 import Checkbox from '@mui/material/Checkbox';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
@@ -25,7 +26,8 @@ const DynamicTable = () => {
   };
 
   return (
-    <TableContainer component={Paper}>
+    <div className='darkbg'>
+    <TableContainer component={Paper} variant="outlined">
       <Table>
         <TableHead>
           <TableRow>
@@ -63,6 +65,7 @@ const DynamicTable = () => {
         </TableBody>
       </Table>
     </TableContainer>
+    </div>
   );
 };
 

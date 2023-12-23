@@ -3,25 +3,36 @@ import Xarrow, {useXarrow, Xwrapper} from 'react-xarrows';
 import Draggable from 'react-draggable';
 import { Height } from '@mui/icons-material';
 import './roadmap.css';
+import { NavLink } from 'react-router-dom';
+// import FullScreenDialog from '../../Dialogbox';
 const boxStyle = {margin: '15px',height:'24px',width:"110px"};
 
+function Array(){
+  alert("clicked");
+}
 const DraggableBox = ({id}) => {
     const updateXarrow = useXarrow();
     return (
-        <Draggable onDrag={updateXarrow} onStop={updateXarrow}>
-           <div id={id} className={[id, 'main'].join(' ')}>
+        <Draggable onDrag={updateXarrow}  onStop={updateXarrow}>
+             <NavLink to={id}><div onClick={(event) => {
+            const tempfunc=event.target.id;
+            // alert(tempfunc);
+            // tempfunc();
+
+             }} id={id} className={[id, 'main'].join(' ')}>
                 {id}
             </div>
+            </NavLink>
         </Draggable>
     );
 };
 
-function flow() {
+function Flow() {
   return (
     <div style={{ height: "80vh", display: 'flex', justifyContent: "space-evenly" }}>
       <Xwrapper>
         <span style={{display:'flex',flexDirection:"column",justifyContent:"space-around"}}>
-          <DraggableBox id={'Array'} />
+          <DraggableBox id={'Array'}/>
         </span>
         <span style={{display:'flex',flexDirection:"column",justifyContent:"space-around"}}>
           <DraggableBox id={'Two-Pointers'} />
@@ -52,30 +63,31 @@ function flow() {
           <DraggableBox id={'Bit-Manupulation'} />
         </span>
        
-        <Xarrow start={'Array'} end="Two-Pointers" />
-        <Xarrow start={'Array'} end="Stack" />
-        <Xarrow start={'Two-Pointers'} end="Binary-Search" />
-        <Xarrow start={'Two-Pointers'} end="Sliding-Window" />
-        <Xarrow start={'Two-Pointers'} end="Linked-List"/>
-        <Xarrow start={'Binary-Search'} end="Trees"/>
-        <Xarrow start={'Linked-List'} end="Trees"/>
-        <Xarrow start={'Trees'} end="Tries"/>
-        <Xarrow start={'Trees'} end="Backtracking"/>
-        <Xarrow start={'Trees'} end="Priority-Queue"/>
-        <Xarrow start={'Backtracking'} end="Graph"/>
-        <Xarrow start={'Backtracking'} end="Easy-DP"/>
+        <Xarrow start={'Array'} end="Two-Pointers" animateDrawing curveness={0.7} color='white' />
+        <Xarrow start={'Array'} end="Stack" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Two-Pointers'} end="Binary-Search" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Two-Pointers'} end="Sliding-Window" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Two-Pointers'} end="Linked-List"animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Binary-Search'} end="Trees" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Linked-List'} end="Trees" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Trees'} end="Tries" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Trees'} end="Backtracking" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Trees'} end="Priority-Queue" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Backtracking'} end="Graph" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Backtracking'} end="Easy-DP" animateDrawing curveness={0.7} color='white'/>
         {/* last */}
 
-        <Xarrow start={'Priority-Queue'} end="Interval"/>
-        <Xarrow start={'Priority-Queue'} end="Advanced-Graph"/>
-        <Xarrow start={'Priority-Queue'} end="Greedy"/>
-        <Xarrow start={'Graph'} end="Advanced-Graph"/>
-        <Xarrow start={'Graph'} end="2-D-DP"/>
-        <Xarrow start={'Easy-DP'} end="2-D-DP"/>
-        <Xarrow start={'Easy-DP'} end="Bit-Manupulation"/>
+        <Xarrow start={'Priority-Queue'} end="Interval" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Priority-Queue'} end="Advanced-Graph" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Priority-Queue'} end="Greedy" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Graph'} end="Advanced-Graph" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Graph'} end="2-D-DP" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Easy-DP'} end="2-D-DP" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Easy-DP'} end="Bit-Manupulation" animateDrawing curveness={0.7} color='white'/>
         
       </Xwrapper>
+      
     </div>
   );
 }
-export default flow;
+export default Flow;

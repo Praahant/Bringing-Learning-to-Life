@@ -15,7 +15,7 @@ function Header() {
       <div className="headeContent">
       <NavLink to="/roadmap"><button class="px-4 py-1 text-sm font-semibold rounded-full border hover:text-white hover:border-transparent ">
          RoadMap</button></NavLink>
-         <NavLink to="/"> <button className='px-4 py-1 ml-5 text-sm font-semibold rounded-full border hover:text-white hover:border-transparent  shadow-md'>
+         <NavLink to="/draw"> <button className='px-4 py-1 ml-5 text-sm font-semibold rounded-full border hover:text-white hover:border-transparent  shadow-md'>
         Notes</button></NavLink>
         <NavLink className='' to="/content"> <button className='px-4 py-1 text-sm ml-5 font-semibold rounded-full border hover:text-white hover:border-transparent  shadow-md'>
           content</button> </NavLink>

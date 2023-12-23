@@ -1,6 +1,6 @@
 import {track, useEditor, Tldraw } from '@tldraw/tldraw'
 import '@tldraw/tldraw/tldraw.css'
-
+import Header from '../../header'
 export default function () {
     function SaveButton() {
         const editor = useEditor()
@@ -18,10 +18,10 @@ export default function () {
         )
     }
 	return (
-        <div>
-		<div style={{ position: 'fixed', inset: 0 }}>
+        
+		<div style={{ height: '90vh', top:"100px", }}>
 			<Tldraw />
-		</div>
+		
         
 	</div>)
 }
