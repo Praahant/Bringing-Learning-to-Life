@@ -10,3 +10,31 @@
     /* justify-content: space-around; */
     padding: 5px;
 }
+.flowinside{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+.flowContainer{
+    display:flex;
+    justify-content: space-around;
+    height: 80vh;
+}
+@media only screen and (max-width: 600px) {
+    .flowContainer{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .main{
+        margin: 5px;
+    }
+    .Array{
+        margin: 5px;
+    }
+    .flowinside{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-around;
+    }
+    
+}

@@ -7,9 +7,6 @@ import { NavLink } from 'react-router-dom';
 // import FullScreenDialog from '../../Dialogbox';
 const boxStyle = {margin: '15px',height:'24px',width:"110px"};
 
-function Array(){
-  alert("clicked");
-}
 const DraggableBox = ({id}) => {
     const updateXarrow = useXarrow();
     return (
@@ -29,33 +26,33 @@ const DraggableBox = ({id}) => {
 
 function Flow() {
   return (
-    <div style={{ height: "80vh", display: 'flex', justifyContent: "space-evenly" }}>
+    <div className='flowContainer' >
       <Xwrapper>
-        <span style={{display:'flex',flexDirection:"column",justifyContent:"space-around"}}>
+        <span className='flowinside'>
           <DraggableBox id={'Array'}/>
         </span>
-        <span style={{display:'flex',flexDirection:"column",justifyContent:"space-around"}}>
+        <span className='flowinside'>
           <DraggableBox id={'Two-Pointers'} />
           <DraggableBox id={'Stack'} />
         </span>
-        <span style={{display:'flex',flexDirection:"column",justifyContent:"space-around"}}>
+        <span className='flowinside'>
           <DraggableBox id={'Binary-Search'} />
           <DraggableBox id={'Sliding-Window'} />
           <DraggableBox id={'Linked-List'} />
         </span>
-        <span style={{display:'flex',flexDirection:"column",justifyContent:"space-around"}}>
+        <span className='flowinside'>
           <DraggableBox id={'Trees'} />
         </span>
-        <span style={{display:'flex',flexDirection:"column",justifyContent:"space-around"}}>
+        <span className='flowinside'>
           <DraggableBox id={'Tries'} />
           <DraggableBox id={'Backtracking'} />
         </span>
-        <span style={{display:'flex',flexDirection:"column",justifyContent:"space-around"}}>
+        <span className='flowinside'>
           <DraggableBox id={'Priority-Queue'} />
           <DraggableBox id={'Graph'} />
           <DraggableBox id={'Easy-DP'} />
         </span>
-        <span style={{display:'flex',flexDirection:"column",justifyContent:"space-around"}}>
+        <span className='flowinside'>
           <DraggableBox id={'Interval'} />
           <DraggableBox id={'Greedy'} />
           <DraggableBox id={'Advanced-Graph'} />

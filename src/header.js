@@ -13,7 +13,7 @@ function Header() {
     <div className="header">
       <h1 className='company-name '>Logo</h1>
       <div className="headeContent">
-      <NavLink to="/roadmap"><button class="px-4 py-1 text-sm font-semibold rounded-full border hover:text-white hover:border-transparent ">
+      <NavLink to="/roadmap"><button class="">
          RoadMap</button></NavLink>
          <NavLink to="/draw"> <button className='px-4 py-1 ml-5 text-sm font-semibold rounded-full border hover:text-white hover:border-transparent  shadow-md'>
         Notes</button></NavLink>
