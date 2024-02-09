@@ -6,10 +6,21 @@
     color: #FFE6C7;
 
   }
+  .hbtn{
+        margin: 16px;
+  }
+  .headeravatar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+  }
   .headeContent{
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
+    justify-content: center;
+    align-items: center;
     margin: 16px;
   }
   .hIn{
@@ -26,8 +37,9 @@
   }
   
   .company-name {
-    margin: 16px;
-    font-size: x-large;
+    margin: 5px;
+    max-width: 70px;
+    max-height: 70px;
   }
   .active{
     color:#dadfea;

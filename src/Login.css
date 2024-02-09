@@ -1,0 +1,121 @@
+  /* djfnjdngj */
+  .logincontainer {
+    height: 90vh;
+    /* width: fullscreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #4a4549;
+    background: -webkit-linear-gradient(
+        to right,
+        #848499,
+        #ccb4c7
+    );
+    background: linear-gradient(
+        to right,
+        #252526,
+        #1e3750
+    ); 
+}
+.circle1,
+.circle2 {
+    background: white;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.1)
+    );
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    border-radius: 50%;
+}
+.circle1 {
+  top: 10%;
+  left: 10%;
+  transform: translate(-10%, -10%);
+}
+
+.circle2 {
+  top: 70%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+.glass-card {
+  background:rgba(245, 245, 245, 0);
+  backdrop-filter: blur(1rem);
+  width: 60%;
+  height: 60%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5rem;
+  box-shadow: 0 0 1rem rgba(240, 237, 237, 0.2);
+}
+.glass-card h1 {
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+.login__google{
+  
+}
+.googleloginbtn{
+  
+}
+
+.glogo {
+  
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /*border: 1px solid #000;*/
+  background-image: linear-gradient(to bottom, rgba(245, 245, 245, 0)  43%, #3876f8 43%);
+}
+
+.gcolors {
+  position: absolute;
+  top: -30px;
+  left: -100px;
+  height: 0;
+  width: 0;
+  border-top: 200px solid #f3001c;
+  border-bottom: 200px solid #00c449;
+  border-right: 200px dashed rgba(245, 245, 245, 0)/*#3876f8*/;
+  border-left: 200px solid #ffc500;
+  /*opacity: .5;*/
+}
+
+.gcircle {
+  background: #272f41;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.gbar {
+  width: 145px;
+  height: 55px;
+  background: #3876f8;
+  position: absolute;
+  top: 128px;
+  right: 5px;
+  z-index: 3;
+}

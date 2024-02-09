@@ -9,7 +9,6 @@ export default function Roadmap() {
   return (
     <div className="">
     <RoadmapContent />
-    
   </div>
   )
 }

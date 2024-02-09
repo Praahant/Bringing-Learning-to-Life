@@ -7,17 +7,18 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import top100Films from './ProblemList';
 import FullScreenDialog from './Dialogbox';
+import companyLogo from './image/logo5.png';
 
 function Header() {
   return (
     <div className="header">
-      <h1 className='company-name '>Logo</h1>
       <div className="headeContent">
-      <NavLink to="/roadmap"><button class="">
+      <img className='company-name' src={companyLogo}/>
+      <NavLink to="/roadmap"><button className="hbtn px-4 py-1 ml-5 text-sm font-semibold rounded-full border hover:text-white hover:border-transparent  shadow-md">
          RoadMap</button></NavLink>
-         <NavLink to="/draw"> <button className='px-4 py-1 ml-5 text-sm font-semibold rounded-full border hover:text-white hover:border-transparent  shadow-md'>
+         <NavLink to="/draw"> <button className='hbtn px-4 py-1 ml-5 text-sm font-semibold rounded-full border hover:text-white hover:border-transparent  shadow-md'>
         Notes</button></NavLink>
-        <NavLink className='' to="/content"> <button className='px-4 py-1 text-sm ml-5 font-semibold rounded-full border hover:text-white hover:border-transparent  shadow-md'>
+        <NavLink className='' to="/content"> <button className='hbtn px-4 py-1 text-sm ml-5 font-semibold rounded-full border hover:text-white hover:border-transparent  shadow-md'>
           content</button> </NavLink>
         </div>
         {/* <Autocomplete
@@ -28,7 +29,9 @@ function Header() {
       sx={{ width: 200 }}
       renderInput={(params) => <TextField {...params} label="Questions" />}
     /> */}
+    <div className='headeravatar'>
         <Avatar className='m-5'>A</Avatar>
+    </div>
     </div>
   );
 }

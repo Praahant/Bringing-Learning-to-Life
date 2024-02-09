@@ -10,7 +10,7 @@ const boxStyle = {margin: '15px',height:'24px',width:"110px"};
 const DraggableBox = ({id}) => {
     const updateXarrow = useXarrow();
     return (
-        <Draggable onDrag={updateXarrow}  onStop={updateXarrow}>
+        // <Draggable onDrag={updateXarrow}  onStop={updateXarrow}>
              <NavLink to={id}><div onClick={(event) => {
             const tempfunc=event.target.id;
             // alert(tempfunc);
@@ -20,7 +20,7 @@ const DraggableBox = ({id}) => {
                 {id}
             </div>
             </NavLink>
-        </Draggable>
+      //  </Draggable>
     );
 };
 
@@ -60,27 +60,27 @@ function Flow() {
           <DraggableBox id={'Bit-Manupulation'} />
         </span>
        
-        <Xarrow start={'Array'} end="Two-Pointers" animateDrawing curveness={0.7} color='white' />
-        <Xarrow start={'Array'} end="Stack" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Two-Pointers'} end="Binary-Search" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Two-Pointers'} end="Sliding-Window" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Two-Pointers'} end="Linked-List"animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Binary-Search'} end="Trees" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Linked-List'} end="Trees" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Trees'} end="Tries" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Trees'} end="Backtracking" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Trees'} end="Priority-Queue" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Backtracking'} end="Graph" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Backtracking'} end="Easy-DP" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Array'} end="Two-Pointers"  curveness={0.7} color='white' />
+        <Xarrow start={'Array'} end="Stack"  curveness={0.7} color='white'/>
+        <Xarrow start={'Two-Pointers'} end="Binary-Search"  curveness={0.7} color='white'/>
+        <Xarrow start={'Two-Pointers'} end="Sliding-Window"  curveness={0.7} color='white'/>
+        <Xarrow start={'Two-Pointers'} end="Linked-List" curveness={0.7} color='white'/>
+        <Xarrow start={'Binary-Search'} end="Trees"  curveness={0.7} color='white'/>
+        <Xarrow start={'Linked-List'} end="Trees"  curveness={0.7} color='white'/>
+        <Xarrow start={'Trees'} end="Tries"  curveness={0.7} color='white'/>
+        <Xarrow start={'Trees'} end="Backtracking"  curveness={0.7} color='white'/>
+        <Xarrow start={'Trees'} end="Priority-Queue"  curveness={0.7} color='white'/>
+        <Xarrow start={'Backtracking'} end="Graph"  curveness={0.7} color='white'/>
+        <Xarrow start={'Backtracking'} end="Easy-DP"  curveness={0.7} color='white'/>
         {/* last */}
 
-        <Xarrow start={'Priority-Queue'} end="Interval" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Priority-Queue'} end="Advanced-Graph" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Priority-Queue'} end="Greedy" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Graph'} end="Advanced-Graph" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Graph'} end="2-D-DP" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Easy-DP'} end="2-D-DP" animateDrawing curveness={0.7} color='white'/>
-        <Xarrow start={'Easy-DP'} end="Bit-Manupulation" animateDrawing curveness={0.7} color='white'/>
+        <Xarrow start={'Priority-Queue'} end="Interval"  curveness={0.7} color='white'/>
+        <Xarrow start={'Priority-Queue'} end="Advanced-Graph"  curveness={0.7} color='white'/>
+        <Xarrow start={'Priority-Queue'} end="Greedy"  curveness={0.7} color='white'/>
+        <Xarrow start={'Graph'} end="Advanced-Graph"  curveness={0.7} color='white'/>
+        <Xarrow start={'Graph'} end="2-D-DP"  curveness={0.7} color='white'/>
+        <Xarrow start={'Easy-DP'} end="2-D-DP"  curveness={0.7} color='white'/>
+        <Xarrow start={'Easy-DP'} end="Bit-Manupulation"  curveness={0.7} color='white'/>
         
       </Xwrapper>
       
